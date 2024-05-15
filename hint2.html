@@ -1,0 +1,82 @@
+<DOCTYPE html>
+<html lang="en">
+       
+<meta charset="UTF8">
+<meta name="viewport" content="width=device-width, initial-scale">
+<head>
+    <style>
+    body {
+        margin: 0; /* Elimina el margen alrededor del cuerpo */
+        height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana del navegador */
+        width: 100vw; /* Ajusta el ancho al 100% de la anchura de la ventana del navegador */
+    }
+    
+    /* Media Query para pantallas con una anchura máxima de 800px */
+    @media only screen and (max-width: 600px) {
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+    }
+    </style>
+    <title>pract 2</title>
+    <h2>Calculadoras</h2>
+    <h2>Registro de usuario</h2>
+    <head>
+        <title>Registro de Usuario</title>
+        <style>
+            body {
+                background-color: #c5b90fc5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: left;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="userForm">
+            <p><input type="text" id="nombre" placeholder="Nombre"><br></p>
+            <p><input type="text" id="apellidoPaterno" placeholder="Apellido Paterno"><br></p>
+            <p><input type="text" id="apellidoMaterno" placeholder="Apellido Materno"><br></p>
+            <p><input type="date" id="fechaNacimiento"><br></p>
+            <p><input type="submit" value="Generar Correo"></p>
+        </form>
+          
+            <div class="footer"> <p>mi pagina web</p> <p>todos los derechos reservados <p>15/05/2024</p></div>
+           </h2>
+        <script>
+            document.getElementById('userForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                var nombre = document.getElementById('nombre').value;
+                var apellidoPaterno = document.getElementById('apellidoPaterno').value;
+                var apellidoMaterno = document.getElementById('apellidoMaterno').value;
+                var fechaNacimiento = new Date(document.getElementById('fechaNacimiento').value);
+                var correo = nombre.charAt(0) + apellidoPaterno + apellidoMaterno.charAt(0) + fechaNacimiento.getFullYear() + "@gmail.com"; 
+                alert("Tu correo generado es: " + correo);
+                window.location.href = "https://yrcalla.github.io/hitt/hitt.html";
+            });
+        </script>
+        
+    
+   
+        
+    </body>
+ 
+
+
+
+
+       
+
+</html>
+</DOCTYPE>
